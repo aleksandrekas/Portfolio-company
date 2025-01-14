@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --primary-green: #1DBF73;
+    --gray-color:#656565;
+    --button-black:#353535;
+    --gray-background: #F2F2F2;
+    --white-color:#FFFFFF;
+    --smallest-btn-text: 0.875rem;
+    --medium-btn-text: 1rem;
+    --big-btn-text: 1.125rem;
+}
+
+
+body{
+    font-family: "Montserrat", serif;
+}
+
+
+/* ------------default styles---------------------------- */
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.75rem 0;
+}
+
+.contGray{
+    background-color: var(--gray-background);
+}
+
+a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+button{
+    text-align: center;
+    color: var(--white-color);
+    padding: 10px 30px;
+    border: none;
+    background-color: var(--primary-green);
+}
+
+.blackBGHover:hover{
+    background-color: var(--button-black);
+    color: var(--white-color);
+}
+
+.greenBGHover:hover{
+    background-color: var(--primary-green);
+    color: var(--white-color);
+}
+
+.whiteBGHover:hover{
+    background-color: var(--white-color);
+    color: var(--primary-green);
+}
