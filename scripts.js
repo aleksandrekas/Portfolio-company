@@ -2,6 +2,11 @@ const overlay = document.querySelector('.overlay')
 const sideMenu = document.getElementById('sideMenu')
 const hamburgerBtn = document.getElementById('hamburgerBtn')
 const dropDownBtn = document.getElementById('dropDown')
+const leftCarouselBtn = document.querySelector('.leftBtn')
+const rightCarouselBtn = document.querySelector('.rightBtn')
+const carouselItems = document.querySelectorAll('.carouselItem')
+const carouselOverlay = document.getElementById("carouselOverlay")
+ let num = 0
 
 window.addEventListener('scroll',()=>{
     if(window.scrollY >=30){
@@ -40,3 +45,55 @@ dropDownBtn.addEventListener('click',()=>{
         subMenu.style.height ='0px'
     }
 })
+
+
+
+// -----------------carousell scripts-------------------
+
+
+function showItem(num) {
+    carouselItems.forEach(item => {
+        item.style.display = 'none';
+    });
+    carouselItems[num].style.display = 'flex';
+}
+
+function fade(changeItemCallback){
+    carouselOverlay.classList.add('fade')
+
+
+    setTimeout(() => {
+        if (changeItemCallback) changeItemCallback();
+    }, 100); 
+    carouselOverlay.addEventListener('transitionend',()=>{
+        carouselOverlay.classList.remove('fade')
+    })
+
+}
+
+
+
+rightCarouselBtn.addEventListener('click', () => {
+    fade(()=>{
+        if (num === 2) {
+            num = 0;
+        } else {
+            num += 1;
+        }
+        showItem(num)
+    })
+});
+leftCarouselBtn.addEventListener('click', () => {
+    fade(()=>{
+        if (num === 0) {
+            num = 2;
+        } else {
+            num -= 1;
+        }
+        showItem(num)
+    })
+});
+
+
+
+showItem(num)
