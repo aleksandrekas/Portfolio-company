@@ -10,6 +10,23 @@ const bottomBtns = document.querySelectorAll('.bottomBtnLines')
 
 let num = 0
 
+
+function matchContNimage(imgId,contId){
+    // this function will set containers height = to img height
+    const image = document.getElementById(imgId);
+    const container = document.getElementById(contId);
+    const observer = new ResizeObserver(()=>{  
+        container.style.height = `${image.offsetHeight}px`;
+    })
+
+    observer.observe(image);
+}
+
+
+
+
+
+
 window.addEventListener('scroll',()=>{
     if(window.scrollY >=30){
         document.querySelector("header").classList.add('scrolled')
@@ -107,6 +124,12 @@ leftCarouselBtn.addEventListener('click', () => {
         showItem(num); // Display the correct item
     });
 });
+
+
+
+
+
+
 
 
 
