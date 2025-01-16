@@ -6,7 +6,9 @@ const leftCarouselBtn = document.querySelector('.leftBtn')
 const rightCarouselBtn = document.querySelector('.rightBtn')
 const carouselItems = document.querySelectorAll('.carouselItem')
 const carouselOverlay = document.getElementById("carouselOverlay")
- let num = 0
+const bottomBtns = document.querySelectorAll('.bottomBtnLines')
+
+let num = 0
 
 window.addEventListener('scroll',()=>{
     if(window.scrollY >=30){
@@ -49,7 +51,15 @@ dropDownBtn.addEventListener('click',()=>{
 
 
 // -----------------carousell scripts-------------------
+function bottomBtnHandler(num){
+    bottomBtns.forEach((btn, i) => {
+        btn.classList.remove('botBtnActive')
+        if(i === num){
+            btn.classList.add('botBtnActive')
+        }
+    });
 
+}
 
 function showItem(num) {
     carouselItems.forEach(item => {
@@ -71,27 +81,31 @@ function fade(changeItemCallback){
 
 }
 
+bottomBtnHandler(num)
 
 
 rightCarouselBtn.addEventListener('click', () => {
-    fade(()=>{
-        if (num === 2) {
-            num = 0;
-        } else {
+    fade(() => {
+        if (num < carouselItems.length - 1) {
             num += 1;
-        }
-        showItem(num)
-    })
-});
-leftCarouselBtn.addEventListener('click', () => {
-    fade(()=>{
-        if (num === 0) {
-            num = 2;
         } else {
-            num -= 1;
+            num = 0;
         }
-        showItem(num)
-    })
+        bottomBtnHandler(num); // Call after updating num
+        showItem(num); // Display the correct item
+    });
+});
+
+leftCarouselBtn.addEventListener('click', () => {
+    fade(() => {
+        if (num > 0) {
+            num -= 1;
+        } else {
+            num = carouselItems.length - 1;
+        }
+        bottomBtnHandler(num); // Call after updating num
+        showItem(num); // Display the correct item
+    });
 });
 
 
