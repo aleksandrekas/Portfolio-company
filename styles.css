@@ -16,7 +16,7 @@
     --smallest-btn-text: 0.875rem;
     --medium-btn-text: 1rem;
     --big-btn-text: 1.255rem;
-    --shadow:0px 2px 10px #afaeae;
+    --shadow:0px 2px 10px #d4d3d3;
 }
 
 
@@ -415,8 +415,14 @@ header ion-icon{
 
 .welcomeSection{
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 3rem 0 0 0;
     padding: 2rem;
+}
+
+.leftContent{
+    margin-right:30px ;
 }
 
 
@@ -432,7 +438,7 @@ header ion-icon{
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding: 0 0 0 30px;
+    padding: 0 15px;
 }
 
 .rightContent h1{
@@ -456,20 +462,275 @@ header ion-icon{
     font-weight: 300;
 }
 
+.bottomContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bottomItem{
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-color);
+    margin: 0 15px ;
+    transition: 0.2s;
+}
+
+.bottomItemUpper{
+    width: 100%;
+    position: relative;
+}
+
+
+.bottomItemUpperImage{
+    max-width: 350px;
+    width: 100%;
+}
+
+.bottomItemUpperIcon{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -32px;
+    left: calc(50% - 32px);
+    background-color: var(--primary-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+}
+
+.bottomItemUpperIcon ion-icon{
+    font-size: 2.5rem;
+    color: var(--white-color);
+}
+
+.bottomItemTitle{
+    margin: 40px 0 12px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.bottomItemPara{
+    font-size: var(--smallest-btn-text);
+    color: var(--gray-color);
+    font-weight: 300;
+    padding: 0 30px;
+    line-height: 1.5rem;
+}
+
+.bottomItemButton{
+    margin: 15px 30px 30px;
+    width: 115px;
+    padding: 0;
+    height: 31px;
+    font-size: 14px;
+    letter-spacing: 1px; 
+}
+
+
+.bottomItem:hover .bottomItemUpperIcon{
+    background-color: var(--white-color);
+}
+.bottomItem:hover .bottomItemButton {
+    background-color: #353535;
+}
+.bottomItem:hover ion-icon {
+    color: var(--primary-green);
+}
+
+.bottomItem:hover{
+    box-shadow: var(--shadow);
+}
+
+
+/* -----------services------------ */
+.servicesContainer{
+    margin: 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.serviceItem{
+    max-width: 255px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.serviceItem ion-icon{
+    color: var(--primary-green);
+    font-size: 3.2rem;
+    margin: 0 0 1rem 0;
+}
+
+
+.serviceItem h4{
+    font-size: var(--big-btn-text);
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+}
+
+.serviceItem p{
+    color: var(--gray-color);
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0 0 1rem 0;
+}
 
 
 
+/* -----calll to action----- */
+
+#callAction{
+    background-color: var(--primary-green);
+    color: var(--white-color);
+}
+
+#callAction p{
+    color: var(--white-color);
+}
+
+#callAction .dottedLine .innerLines{
+    background-color: var(--white-color);
+}
+
+#callAction button{
+    background-color: var(--white-color);
+    color: var(--primary-green);
+    width: 204px;
+    height: 40px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 200;
+    padding: 0;
+    margin: 2rem 0 0 0;
+}
+
+/* --------pricing----------- */
 
 
 
+.priceContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+.price{
+    max-width: 350px !important;
+    background-color: var(--white-color);
+    width: 100%;
+    margin: 4rem 2rem;
+}
 
 
+.price:hover{
+    box-shadow: var(--shadow);
+}
+
+.priceUpper{
+    max-width: 350px;
+    width: 100%;
+    background-color: var(--button-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: var(--white-color);
+}
+
+.priceUpper .priceH{
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0 0 1rem;
+}
+
+.priceUpper .priceN{
+    font-size: 24px;
+    margin: 0 0 1rem 0;
+}
+
+.priceUpper span{
+    font-size: 40px;
+}
+
+.priceUpper .priceTime{
+    font-size: 12px;
+}
 
 
+.priceLower{
+    max-width: 350px;
+    width: 100%;
+    padding: 40px;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.priceUl{
+    list-style: none;
+    width: 100%;
+}
+
+.priceLi{
+    margin: 10px 0;
+    font-weight: 300;
+    color: var(--gray-color);
+}
+
+ion-icon[name = "checkmark-outline"]{
+    color: var(--primary-green);
+}
+ion-icon[name = "close-outline"]{
+    color: red;
+}
 
 
+.priceLower button{
+    width: 143px;
+    height: 44px;
+    background-color: var(--button-black);
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+    padding: 0;
+    font-weight: 100  !important;
+}
+
+#greenPrice{
+    margin-top: 0rem ;
+}
 
 
+#greenPrice .priceUpper{
+    background-color: var(--primary-green);
+}
+
+#greenPrice .priceLower button{
+    background-color: var(--primary-green);
+}
+#greenPrice .priceLower button:hover{
+    background-color: var(--button-black);
+}
 
 
 

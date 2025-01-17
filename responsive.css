@@ -48,6 +48,25 @@
 
 
 
+@media screen and (max-width: 850px){
+    .bottomContainer{
+        padding: 0 2rem;
+        flex-direction: column !important ;
+    }
+    .bottomItem{
+        max-width: 540px;
+        width: 100% !important;
+        margin: 0  1rem;
+    }
+    .bottomItemUpperImage{
+        max-width: 540px;
+        width: 100%;
+    }
+}
+
+
+
+
 @media screen and (max-width: 500px){
     .carouselTitle{
         font-size: 1.7rem !important;
