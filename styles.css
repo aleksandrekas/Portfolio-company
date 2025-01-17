@@ -732,6 +732,92 @@ ion-icon[name = "close-outline"]{
     background-color: var(--button-black);
 }
 
+/* -------skills section----- */
+.skillsSection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.skillItemContainer{
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    background-color: #E9ECEF;
+    height: 35px;
+    margin: 0 0 1rem 0;
+}
+
+.skillLines{
+    position: absolute;
+    left: 0;
+    display: flex;
+    width: 0%;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    color: var(--white-color);
+    font-size: 0.8rem;
+    padding: 0 1rem;
+    transition: 1s;
+}
+
+#green{
+    background-color: #28A745;
+}
+#blue{
+    background-color: #17A2B8;
+}
+#yellow{
+    background-color: #FFC107;
+}
+#red{
+    background-color: #DC3545;
+}
+
+.numbersSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.numbersItem{
+    width: 255px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 1rem 0;
+}
+
+.numbersItem h1{
+    font-size: 4rem;
+    color: var(--primary-green);
+}
+
+.numbersItem p{
+    font-size: var(--big-btn-text);
+    color: var(--gray-color);
+    font-weight: 300;
+}
+
+.filterButtons{
+    display: flex;
+    justify-content: center !important;
+    margin: 2rem 0 0 0;
+}
+
+.filterButtons button{
+    background-color: #353535;
+    padding: 10px 20px;
+}
+
 
 
 

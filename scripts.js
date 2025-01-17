@@ -127,10 +127,53 @@ leftCarouselBtn.addEventListener('click', () => {
 
 
 
+// this one is for skill lines
+
+const skillsObserver = new IntersectionObserver(([entry],observer) => {
+    if (entry.isIntersecting) {
+      document.getElementById("green").style.width = "100%"
+      document.getElementById("blue").style.width = "90%"
+      document.getElementById("yellow").style.width = "80%"
+      document.getElementById("red").style.width = "70%"
+
+      observer.unobserve(entry.target);
+    }
+});
+
+// this  function animates numbers
+
+function displayValue(targetValue, targetDiv,time) {
+    let currentValue = 0;
+    const displayDiv = document.getElementById(targetDiv);
+  
+    const interval = setInterval(() => {
+      if (currentValue < targetValue) {
+        currentValue++;
+        displayDiv.innerText = currentValue; 
+      } else {
+        clearInterval(interval);
+      }
+    }, time);
+}
+
+const amountObserver = new IntersectionObserver(
+    ([entry], observer) => {
+      if (entry.isIntersecting) {
+        displayValue(100, "staff", 15);
+        displayValue(200, "clients", 8); 
+        displayValue(300, "projects", 5);
+        displayValue(400, "runing", 4); 
+  
+        observer.unobserve(entry.target);
+      }
+    },
+   
+);
 
 
 
 
 
-
+amountObserver.observe(document.querySelector(".numbersSection"))
+skillsObserver.observe(document.querySelector(".skillsSection"))
 showItem(num)
