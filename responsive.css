@@ -70,11 +70,13 @@
 @media screen and (max-width: 850px){
     .priceContainer{
         flex-direction: column;
+        padding: 1.3rem;
     }
 
     .price{
         max-width: 510px !important;
         width: 100%;
+        margin: 1rem !important;
     }
 }
 
