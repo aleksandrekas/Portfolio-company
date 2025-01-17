@@ -636,7 +636,7 @@ header ion-icon{
     max-width: 350px !important;
     background-color: var(--white-color);
     width: 100%;
-    margin: 4rem 2rem;
+    margin: 4rem 1rem;
 }
 
 
@@ -645,7 +645,7 @@ header ion-icon{
 }
 
 .priceUpper{
-    max-width: 350px;
+    /* max-width: 350px; */
     width: 100%;
     background-color: var(--button-black);
     display: flex;
@@ -677,7 +677,7 @@ header ion-icon{
 
 
 .priceLower{
-    max-width: 350px;
+    /* max-width: 350px; */
     width: 100%;
     padding: 40px;
     background-color: var(--white-color);
