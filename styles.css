@@ -810,6 +810,7 @@ ion-icon[name = "close-outline"]{
 .filterButtons{
     display: flex;
     justify-content: center !important;
+    flex-wrap: wrap;
     margin: 2rem 0 0 0;
 }
 
