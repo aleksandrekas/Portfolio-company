@@ -62,6 +62,11 @@
         max-width: 540px;
         width: 100%;
     }
+
+    .portfolioCategories{
+        max-width: 750px;
+        grid-template:1fr 1fr 1fr/ 1fr 1fr ;
+    }
 }
 
 
@@ -85,6 +90,12 @@
 
 
 
+@media screen and (max-width: 620px){
+    .portfolioCategories{
+        max-width: 360px;
+        grid-template:1fr 1fr 1fr 1fr 1fr 1fr/ 1fr;
+    }
+}
 @media screen and (max-width: 500px){
     .carouselTitle{
         font-size: 1.7rem !important;

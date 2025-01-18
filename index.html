@@ -394,17 +394,81 @@
         </div>
 
         <div class="filterButtons">
-            <button class="greenBGHover">ALL</button>
-            <button class="greenBGHover">WEB DESIGN</button>
-            <button class="greenBGHover">WEB DEVELOPMENT</button>
-            <button class="greenBGHover">APP DESIGN</button>
-            <button class="greenBGHover">APP DEVELOPMENT</button>
+            <button class="greenBGHover"  data-filter="*">ALL</button>
+            <button class="greenBGHover" data-filter=".web-design">WEB DESIGN</button>
+            <button class="greenBGHover" data-filter=".web-development">WEB DEVELOPMENT</button>
+            <button class="greenBGHover" data-filter=".app-design">APP DESIGN</button>
+            <button class="greenBGHover" data-filter=".app-development">APP DEVELOPMENT</button>
+        </div>
+
+        <div class="portfolioCategories">   
+            <div class="categoryItem web-design" data-category="web-design">
+                <img src="img/portfolio-1.jpg" alt="portfolio" class="categoryImg">
+                <div class="categoryItemOverlay"></div>
+                <h4 class="categoryTitle">Lorem ipsum dolor</h4>
+                <p class="categoryP">Web Design</p>
+                <div class="itemsOnHover">
+                    <div class="hoverItem whiteBGHover"><ion-icon class="txtBlackHover" name="eye"></ion-icon></div>
+                    <div class="hoverItem whiteBGHover"><ion-icon class="txtBlackHover" name="link"></ion-icon></div>
+                </div>
+            </div>
+            <div class="categoryItem web-development" data-category="web-development">
+                <img src="img/portfolio-2.jpg" alt="portfolio" class="categoryImg">
+                <div class="categoryItemOverlay"></div>
+                <h4 class="categoryTitle">Nulla ullamcorper pharetra</h4>
+                <p class="categoryP">Web Development</p>
+                <div class="itemsOnHover">
+                    <div class="hoverItem whiteBGHover"><ion-icon class="txtBlackHover" name="eye"></ion-icon></div>
+                    <div class="hoverItem whiteBGHover"><ion-icon class="txtBlackHover" name="link"></ion-icon></div>
+                </div>
+            </div>
+            <div class="categoryItem app-design" data-category="app-design">
+                <img src="img/portfolio-3.jpg" alt="portfolio" class="categoryImg">
+                <div class="categoryItemOverlay"></div>
+                <h4 class="categoryTitle">Phasellus eget dictum</h4>
+                <p class="categoryP">App Design</p>
+                <div class="itemsOnHover">
+                    <div class="hoverItem whiteBGHover"><ion-icon class="txtBlackHover" name="eye"></ion-icon></div>
+                    <div class="hoverItem whiteBGHover"><ion-icon class="txtBlackHover" name="link"></ion-icon></div>
+                </div>
+            </div>
+            <div class="categoryItem app-development" data-category="app-development">
+                <img src="img/portfolio-4.jpg" alt="portfolio" class="categoryImg">
+                <div class="categoryItemOverlay"></div>
+                <h4 class="categoryTitle">Donec mattis vestibulum</h4>
+                <p class="categoryP">App Development</p>
+                <div class="itemsOnHover">
+                    <div class="hoverItem whiteBGHover"><ion-icon class="txtBlackHover" name="eye"></ion-icon></div>
+                    <div class="hoverItem whiteBGHover"><ion-icon class="txtBlackHover" name="link"></ion-icon></div>
+                </div>
+            </div>
+            <div class="categoryItem web-design" data-category="web-design">
+                <img src="img/portfolio-5.jpg" alt="portfolio" class="categoryImg">
+                <div class="categoryItemOverlay"></div>
+                <h4 class="categoryTitle">Pellentesque ullamcorper</h4>
+                <p class="categoryP">Web Design</p>
+                <div class="itemsOnHover">
+                    <div class="hoverItem whiteBGHover"><ion-icon class="txtBlackHover" name="eye"></ion-icon></div>
+                    <div class="hoverItem whiteBGHover"><ion-icon class="txtBlackHover" name="link"></ion-icon></div>
+                </div>
+            </div>
+            <div class="categoryItem web-development" data-category="web-development">
+                <img src="img/portfolio-6.jpg" alt="portfolio" class="categoryImg">
+                <div class="categoryItemOverlay"></div>
+                <h4 class="categoryTitle">Sed pretium sapien</h4>
+                <p class="categoryP">Web Development</p>
+                <div class="itemsOnHover">
+                    <div class="hoverItem whiteBGHover"><ion-icon class="txtBlackHover" name="eye"></ion-icon></div>
+                    <div class="hoverItem whiteBGHover"><ion-icon class="txtBlackHover" name="link"></ion-icon></div>
+                </div>
+            </div>
         </div>
      </section>
 
 
 
     <!--  js files and some other links  -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="scripts.js"></script>

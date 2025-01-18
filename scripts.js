@@ -8,22 +8,26 @@ const carouselItems = document.querySelectorAll('.carouselItem')
 const carouselOverlay = document.getElementById("carouselOverlay")
 const bottomBtns = document.querySelectorAll('.bottomBtnLines')
 
+const portfolioImgs = document.querySelectorAll('.categoryImg')
+const portfolioItems = document.querySelectorAll('.categoryItem')
+
 let num = 0
 
 
-function matchContNimage(imgId,contId){
-    // this function will set containers height = to img height
-    const image = document.getElementById(imgId);
-    const container = document.getElementById(contId);
-    const observer = new ResizeObserver(()=>{  
-        container.style.height = `${image.offsetHeight}px`;
-    })
+// this function sets height of parent to = height of its child image
+function updateHeights() {
+    portfolioItems.forEach((cont, index) => {
+        cont.style.height = `${portfolioImgs[index].offsetHeight}px`;
+    });
+  }
 
+  portfolioImgs.forEach(image => {
+    const observer = new ResizeObserver(() => {
+        updateHeights();
+    });
     observer.observe(image);
-}
-
-
-
+});
+// ---------
 
 
 
@@ -169,6 +173,11 @@ const amountObserver = new IntersectionObserver(
     },
    
 );
+
+
+
+
+
 
 
 
