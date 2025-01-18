@@ -826,12 +826,10 @@ ion-icon[name = "close-outline"]{
     max-width: 1050px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template: 1fr 1fr/ 1fr 1fr 1fr;
     gap: 10px;
-    display: block;
     margin: 1rem;
     padding: 1rem;
-    position: relative;
 }
 
 .categoryItem{
