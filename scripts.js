@@ -7,9 +7,9 @@ const rightCarouselBtn = document.querySelector('.rightBtn')
 const carouselItems = document.querySelectorAll('.carouselItem')
 const carouselOverlay = document.getElementById("carouselOverlay")
 const bottomBtns = document.querySelectorAll('.bottomBtnLines')
-
 const portfolioImgs = document.querySelectorAll('.categoryImg')
 const portfolioItems = document.querySelectorAll('.categoryItem')
+const filterBtns = document.querySelectorAll('.filterButtons button')
 
 let num = 0
 
@@ -173,6 +173,29 @@ const amountObserver = new IntersectionObserver(
     },
    
 );
+
+// filtering through items
+filterBtns.forEach(btn =>{
+    btn.addEventListener('click',()=>{
+        filterBtns.forEach(item =>{
+            item.classList.remove('Active')
+        })
+        btn.classList.add('Active')
+
+        const filterValue = btn.getAttribute('data-filter')
+        portfolioItems.forEach(pItem =>{
+            const itemValue = pItem.getAttribute('data-category')
+            pItem.style.display = 'flex'
+            if(filterValue === 'all'){
+                pItem.style.display = 'flex'
+            }else if(filterValue != itemValue){
+                pItem.style.display = 'none'
+            }else{
+                pItem.style.display = 'flex'
+            }
+        })
+    })
+})
 
 
 

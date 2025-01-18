@@ -910,6 +910,11 @@ ion-icon[name = "close-outline"]{
 }
 
 
+.Active{
+    background-color: var(--primary-green) !important;
+}
+
+
 /* ------------keyFrames-------------- */
 
 @keyframes fade {
