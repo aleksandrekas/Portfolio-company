@@ -86,6 +86,12 @@
 }
 
 
+@media screen and (max-width: 700px){
+    .carouselTitle{
+        font-size: 1.7rem !important;
+        margin-top: 2rem;
+    }
+}
 
 
 
@@ -96,8 +102,5 @@
         grid-template:1fr 1fr 1fr 1fr 1fr 1fr/ 1fr;
     }
 }
-@media screen and (max-width: 500px){
-    .carouselTitle{
-        font-size: 1.7rem !important;
-    }
-}
+
+

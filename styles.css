@@ -823,6 +823,7 @@ ion-icon[name = "close-outline"]{
 
 
 .portfolioCategories{
+    position: relative;
     max-width: 1050px;
     width: 100%;
     display: grid;
@@ -915,16 +916,29 @@ ion-icon[name = "close-outline"]{
 }
 
 
+.categoriesOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray-background);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+
+.fadeWhite{
+    opacity: 1;
+    z-index: 5;
+}
+
+
 /* ------------keyFrames-------------- */
 
-@keyframes fade {
-    0%{
-        background-color: rgba(0,0,0,0.6);
-    }
-    50%{
-        background-color: rgba(0,0,0,1);
-    }
-    100%{
-        background-color: rgba(0,0,0,0.6);
-    }
-}
+
+
+
+
+

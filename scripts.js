@@ -10,6 +10,8 @@ const bottomBtns = document.querySelectorAll('.bottomBtnLines')
 const portfolioImgs = document.querySelectorAll('.categoryImg')
 const portfolioItems = document.querySelectorAll('.categoryItem')
 const filterBtns = document.querySelectorAll('.filterButtons button')
+const categoriesOverlay = document.querySelector('.categoriesOverlay')
+
 
 let num = 0
 
@@ -174,6 +176,22 @@ const amountObserver = new IntersectionObserver(
    
 );
 
+
+// fade effect for portfolio container
+function fadePortfolio(changeItemCallback){
+    categoriesOverlay.classList.add('fadeWhite')
+    setTimeout(() => {
+        if (changeItemCallback) changeItemCallback();
+    }, 500); 
+    categoriesOverlay.addEventListener('transitionend',()=>{
+        categoriesOverlay.classList.remove('fadeWhite')
+    })
+
+}
+
+
+
+
 // filtering through items
 filterBtns.forEach(btn =>{
     btn.addEventListener('click',()=>{
@@ -181,18 +199,19 @@ filterBtns.forEach(btn =>{
             item.classList.remove('Active')
         })
         btn.classList.add('Active')
-
         const filterValue = btn.getAttribute('data-filter')
-        portfolioItems.forEach(pItem =>{
-            const itemValue = pItem.getAttribute('data-category')
-            pItem.style.display = 'flex'
-            if(filterValue === 'all'){
+        fadePortfolio(()=>{
+            portfolioItems.forEach(pItem =>{
+                const itemValue = pItem.getAttribute('data-category')
                 pItem.style.display = 'flex'
-            }else if(filterValue != itemValue){
-                pItem.style.display = 'none'
-            }else{
-                pItem.style.display = 'flex'
-            }
+                if(filterValue === 'all'){
+                    pItem.style.display = 'flex'
+                }else if(filterValue != itemValue){
+                    pItem.style.display = 'none'
+                }else{
+                    pItem.style.display = 'flex'
+                }
+            })
         })
     })
 })
