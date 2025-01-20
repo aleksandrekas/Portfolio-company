@@ -1,3 +1,8 @@
+@media screen and (max-width: 1220px){
+    #footer{
+        padding: 1rem 3rem;
+    }
+}
 @media screen and (max-width: 1050px){
     .rightContent h1{
         font-size: 1.5rem;
@@ -11,6 +16,17 @@
         margin: 0 0 16px 0;
     }
 }
+
+
+
+@media screen and (max-width: 935px){
+    #footer{
+        padding: 1rem 1rem;
+    }
+}
+
+
+
 
 
 
@@ -148,10 +164,20 @@
 
 
 
+
 @media screen and (max-width: 620px){
     .portfolioCategories{
         max-width: 360px;
         grid-template:1fr 1fr 1fr 1fr 1fr 1fr/ 1fr;
+    }
+
+    .footerItem{
+        max-width: 100%;
+    }
+
+    .scrollUp{
+        bottom: 20px;
+        right: 20px;
     }
 }
 
