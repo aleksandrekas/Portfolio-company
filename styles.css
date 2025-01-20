@@ -286,6 +286,25 @@ header ion-icon{
     display: block;
 }
 
+#dropLi a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dropLi a svg {
+    width: 10px;
+}
+#dropLi:hover{
+    color: var(--primary-green);
+}
+
+#dropLi:hover svg path{
+    fill: var(--primary-green);
+}
+
+
+
 
 /* --------- carousel ------------------ */
 #carousel{
@@ -813,12 +832,13 @@ ion-icon[name = "close-outline"]{
     display: flex;
     justify-content: center !important;
     flex-wrap: wrap;
-    margin: 2rem 0 0 0;
+    margin: 2rem 2rem 0 2rem;
 }
 
 .filterButtons button{
     background-color: #353535;
     padding: 10px 20px;
+    margin: 0 0 0.3rem 0;
 }
 
 
@@ -900,11 +920,17 @@ ion-icon[name = "close-outline"]{
     align-items: center;
 }
 
+.hoverItem:hover ion-icon{
+    color: #353535;
+}
+
+
 .hoverItem ion-icon{
     color: var(--white-color);
     font-size: 1.5rem;
     cursor: pointer;
 }
+
 
 .categoryItem:hover .itemsOnHover{
     opacity: 1;
@@ -935,10 +961,49 @@ ion-icon[name = "close-outline"]{
 }
 
 
-/* ------------keyFrames-------------- */
+/* ------------contact us-------------- */
 
 
+.contactContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.contactItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 270px;
+    width: 100%;
+    background-color: var(--white-color);
+    color: var(--button-black);
+    padding: 2rem 1rem;
+    margin: 1rem;
+}
+
+.contactItem:hover{
+    box-shadow: var(--shadow) !important;
+}
+
+.contactItem ion-icon{
+    color: var(--primary-green);
+    font-size: 2.5rem;
+}
+
+
+.contactItem h3{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.contactItem p{
+    font-size: 14px;
+    font-weight: 300;
+}
 
 
 
