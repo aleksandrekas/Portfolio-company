@@ -6,6 +6,9 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 :root{
     --primary-green: #1DBF73;
@@ -1005,5 +1008,101 @@ ion-icon[name = "close-outline"]{
     font-weight: 300;
 }
 
+.bottomContact{
+    max-width: 874px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
 
 
+
+#barasMarket{
+    max-width: 420px;
+    width: 100%;
+}
+
+.form{
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding: 30px;
+    background-color: white;
+}
+
+.form input{
+    max-width: 360px;
+    width: 100%;
+    height: 38px;
+    padding: 10px 14px;
+    font-size: 1rem;
+    font-weight: 200;
+    outline: none;
+    color: var(--gray-color);
+    border: 1px solid  #d4d3d3;
+    margin: 0 0 1rem 0;
+}
+
+.topTwo{
+    /* max-width: 360px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 1rem 0;
+}
+
+.form .topTwo input{
+    max-width: 175px;
+    width: 100%;
+    display: flex;
+    margin: 0;
+
+}
+
+textarea{
+    max-width: 360px;
+    width: 100%;
+    height: 135px;
+    resize: none;
+    padding: 10px 14px;
+    font-size: 1.1rem;
+    outline: none;
+    border: 1px solid  #d4d3d3;
+    margin: 0 0 1rem 0;
+}
+
+.form button{
+    width: 174px;
+    height: 44px;
+    font-size: 1rem;
+}
+
+
+
+
+
+/* -------scrolll up--------- */
+
+.scrollUp{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9;
+    background-color: var(--primary-green);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition:  opacity 0.2s;
+}
+
+.scrollUp ion-icon{
+    font-size: 2rem;
+}

@@ -83,6 +83,43 @@
         width: 100%;
         margin: 1rem !important;
     }
+
+    .bottomContact{
+        max-width: 100%;
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem !important;
+    }
+
+    #barasMarket{
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .form{
+        max-width: 100%;
+        width: 100%;
+    }
+    .form input{
+        max-width: 100%;
+    }
+
+    .topTwo{
+        display: block;
+    }
+
+    .topTwo :nth-child(1){
+        margin: 0 0 1rem 0 !important;
+    }
+
+    .topTwo input{
+        max-width: 100% !important;
+    }
+
+    textarea{
+        max-width: 100%;
+    }
+
 }
 
 
@@ -117,5 +154,8 @@
         grid-template:1fr 1fr 1fr 1fr 1fr 1fr/ 1fr;
     }
 }
+
+
+
 
 

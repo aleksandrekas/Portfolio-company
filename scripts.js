@@ -36,8 +36,10 @@ function updateHeights() {
 window.addEventListener('scroll',()=>{
     if(window.scrollY >=30){
         document.querySelector("header").classList.add('scrolled')
+        document.querySelector('.scrollUp').style.opacity = '1'
     }else{
         document.querySelector("header").classList.remove('scrolled')
+        document.querySelector('.scrollUp').style.opacity = '0'
     }
 })
 
